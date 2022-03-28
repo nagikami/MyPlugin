@@ -9,6 +9,9 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.nagikami.myplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.nagikami.myplugin.services.MyProjectService"/>
+        <applicationService serviceInterface="com.github.nagikami.myplugin.NotifyListener"
+                            serviceImplementation="com.github.nagikami.myplugin.impl.NotifyListenerImpl"/>
+        <postStartupActivity implementation="com.github.nagikami.myplugin.NotifyListenActivity"/>
     </extensions>
 
     <applicationListeners>
