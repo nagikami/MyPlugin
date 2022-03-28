@@ -15,4 +15,11 @@
         <listener class="com.github.nagikami.myplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="testDemoAction" class="com.github.nagikami.myplugin.DemoAction" text="DemoAction"
+                description="just a test">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift D"/>
+        </action>
+    </actions>
 </idea-plugin>
